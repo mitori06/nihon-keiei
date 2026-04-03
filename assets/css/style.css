@@ -1,0 +1,634 @@
+body{
+    margin: 0;
+    font-family:
+      "Noto Sans JP",
+      -apple-system,
+      BlinkMacSystemFont,
+      "Helvetica Neue",
+      "Hiragino Kaku Gothic ProN",
+      "Hiragino Sans",
+      "Yu Gothic",
+      "Meiryo",
+      sans-serif;
+}
+
+.target {
+  transition: opacity 0.2s ease;
+}
+
+.target:hover {
+  opacity: 0.6;
+}
+
+@media screen and (min-width: 1024px){
+.container{
+  border-left: 1.5px solid rgb(0, 7, 131);
+  border-right: 1.5px solid rgb(0, 7, 131);
+  }
+}
+
+.header{
+    position: relative;
+    z-index:999;
+    position: sticky;
+    top: 0;
+
+    background: #fff;
+    box-shadow: 0 3px 6px rgba(56, 56, 56, 0.12);
+    }
+
+  
+.header_inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    padding: 14px 14px;
+  }
+  
+  /* ロゴ */
+  .logo img{
+    height: 50px;
+    width: auto;
+    display: block;
+}
+  
+  /* CTA */
+  .contact_button{
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    padding: 10px 18px;
+    border-radius: 99px;
+  
+    background: linear-gradient(
+      95deg,
+      #002A5A 0.16%,
+      #004CA3 99.84%
+    );
+  
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+  
+    box-shadow: 0 2px 2px rgba(0,0,0,0.25);
+    white-space: nowrap;
+ }
+
+ /* 全体 */
+.lp{
+    background: #fff;
+  }
+  
+  /* 各画像ブロック */
+  .blk img{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .solution-video__media{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .blk-accent {
+    background: linear-gradient(347deg, #002A5A 20.17%, #004CA3 79.83%);
+}
+
+
+#cta .cta-frame{
+  position: relative;
+  max-width: 750px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: linear-gradient(347deg, #002A5A 20.17%, #004CA3 79.83%);
+}
+
+#cta .cta-frame > img{
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 1;
+}
+
+
+
+#cta .cta-frame::after{
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border: 1.5px solid rgba(255,255,255,.9);
+  border-radius: 14px;
+  pointer-events: none;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+/* ボタン（白ピル） */
+#cta .cta-btn {
+  position: relative;          /* ←これが無いとアイコンが飛ぶ */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 80%;
+  height: 64px;
+  margin: 0px auto 48px;
+
+  background:#fff;
+  border-radius:999px;
+  text-decoration:none;
+
+  color:#0b3a78;
+  font-size:24px;
+  font-weight:800;
+
+  box-shadow: 0 10px 24px rgba(0,0,0,.22);
+}
+
+
+
+
+/* 丸アイコン（巨大化防止含む） */
+#cta .cta-btnIcon{
+  position:absolute;
+  right:16px;
+  top:50%;
+  transform:translateY(-50%);
+
+  width:44px !important;
+  height:44px !important;
+  max-width:none;              /* img{width:100%}対策 */
+  display:block;
+}
+
+
+
+  /*よくあるご質問*/
+  :root{
+    --navy: #013067;
+    --gap: 14px;
+    --pad: 14px;
+    --q: #f25c3b; /* Qのオレンジっぽい */
+  }
+  
+  .faq{
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 84px 14px;
+  }
+  
+  .faq__title{
+    margin: 0 0 48px;
+    text-align: center;
+    color: var(--navy);
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+  }
+  
+  .faq__list{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  .faq__item{
+    border: 1px solid var(--navy);
+    background: #fff;
+  }
+  
+  /* summaryデフォルトの三角を消す */
+  .faq__q{
+    list-style: none;
+  }
+  .faq__q::-webkit-details-marker{
+    display: none;
+  }
+  
+  /* ✅ あなたのレイアウト指定（ここが本体） */
+  .faq__q{
+    display: flex;
+    padding: var(--pad) var(--pad);
+    align-items: center;
+    gap: var(--gap);
+    align-self: stretch;
+  
+    cursor: pointer;
+  }
+  
+  /* 上段（Q + テキスト + 右アイコン） */
+  .faq__qleft{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+  
+  /* Q / A バッジ */
+  .faq__badge{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+  
+    font-size: 18px;
+    font-weight: 800;
+    color: #fff;
+    background: var(--q);
+    flex: 0 0 auto;
+  }
+  
+  .faq__badge--a{
+    background: #fff;
+    color: var(--navy);
+    border: 1px solid var(--navy);
+  }
+  
+  /* 質問文 */
+  .faq__qtext{
+    color: var(--navy);
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.5;
+    flex: 1;
+  }
+  
+  /* 右側 + / - アイコン（CSSで描く） */
+  .faq__icon{
+    margin-left: auto;
+    width: 22px;
+    height: 22px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  .faq__icon::before,
+  .faq__icon::after{
+    content:"";
+    position:absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 2px;
+    background: var(--navy);
+    transform: translateY(-50%);
+  }
+  .faq__icon::after{
+    transform: translateY(-50%) rotate(90deg);
+  }
+  
+  /* 開いたら + → - */
+  .faq__item[open] .faq__icon::after{
+    display: none;
+  }
+  
+  /* 回答部分 */
+  .faq__a{
+    padding: 0 var(--pad) var(--pad);
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  
+  .faq__ahead{
+    padding-top: 2px;
+  }
+  
+  .faq__atext{
+    margin: 0;
+    color: var(--navy);
+    font-size: 16px;
+    line-height: 1.8;
+  }
+  
+  /* モバイル微調整 */
+  @media (max-width: 360px){
+    .faq__qtext{ font-size: 16px; }
+    .faq__badge{ width: 36px; height: 36px; }
+  }
+
+  /* お問い合わせ セクション（カード） */
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 56px;
+  
+    padding: 40px 14px;
+    margin: 0 auto;
+  
+    border-radius: 35px 35px 0 0;
+    background: linear-gradient(190deg, #E4EBFF 0.35%, #FFFFFF 49.59%, #E5ECFF 99.65%);
+  }
+  
+  /* 見出し */
+  .contact__head{
+    text-align: center;
+  }
+  
+  .contact__title{
+    margin: 0;
+    color: #013067;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+  }
+  
+  .contact__sub{
+    margin: 14px 0 0;
+    color: #013067;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  /* フォーム */
+  .contact__form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+  
+  /* 各フィールド */
+  .field{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .field__label{
+    color: #013067;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+  }
+  
+  .req{
+    color: #E60023;
+    margin-left: 4px;
+    font-weight: 800;
+  }
+  
+  /* 入力 */
+  .field__input,
+  .field__textarea{
+    padding: 14px 14px;
+    font-size: 16px;
+  
+    border-radius: 6px;
+    border: 1px solid rgba(1, 48, 103, 0.28);
+    background: #FFFFFF;
+  
+    outline: none;
+  }
+  
+  /* プレースホルダー（画像の薄いグレー感） */
+  .field__input::placeholder,
+  .field__textarea::placeholder{
+    color: rgba(1, 48, 103, 0.35);
+  }
+  
+  /* フォーカス時（画像っぽく控えめ） */
+  .field__input:focus,
+  .field__textarea:focus{
+    border-color: rgba(1, 48, 103, 0.55);
+  }
+  
+  /* テキストエリアは縦だけ伸ばせる */
+  .field__textarea{
+    resize: vertical;
+    min-height: 220px;
+  }
+  
+  /* 送信ボタン（ピル＋グラデ＋影） */
+  .contact__submit{
+    position: relative;
+    margin: 35px auto;
+    width: 80%;
+    padding: 18px 16px;
+  
+    border: 0;
+    border-radius: 999px;
+  
+    background: linear-gradient(95deg, #002A5A 0.16%, #004CA3 99.84%);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+  
+    color: #fff;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+  
+    cursor: pointer;
+  }
+
+  .contact__submit .btn-icon{
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;   /* 丸アイコンのサイズ */
+    height: 44px;
+  }
+  
+  /* 押した感 */
+  .contact__submit:active{
+    transform: translateY(1px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.16);
+  }
+  
+    
+  
+.footer{
+    padding: 48px 0px 48px ;
+    border-top: 1px solid #002A5A;
+}
+  
+.footer_inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+.footer a{
+    color: inherit;
+    text-decoration: underline;
+}
+  
+.footer_inner .logo{
+    height: 50px;
+    width: auto;
+    display: block;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000000;
+}
+
+.footer__nav{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+/* =========================
+   thanks-page
+========================= */
+
+.thanks {
+    text-align: center;
+    padding: 80px 14px 100px;
+  }
+  
+  .thanks__title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 48px;
+    color: #e15e00;
+
+  }
+  
+  .thanks__text {
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .thanks__back{
+    margin-top: 56px;
+  }
+  
+  .thanks__btn{
+  position: relative;          /* ←これが無いとアイコンが飛ぶ */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 80%;
+  height: 64px;
+  margin: 0px auto 48px;
+
+  background:#fff;
+  border-radius:999px;
+  border: 2px solid;
+  text-decoration:none;
+
+  color:#0b3a78;
+  font-size:16px;
+  font-weight:800;
+
+  box-shadow: 0 10px 24px rgba(0,0,0,.22);
+  }
+
+  /* 追従CTAバナー　初期状態：非表示（PC） */
+.sp-fixed-banner{
+  display: none;
+}
+
+/* スマホだけ表示 */
+@media screen and (max-width: 767px){
+  .sp-fixed-banner{
+    display: block;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 9999; /* ほぼ最前面 */
+  }
+
+  .sp-fixed-banner img{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* バナー分だけ下に余白を確保（超重要） */
+  body{
+    padding-bottom: 80px; /* バナーの高さに合わせる */
+  }
+}
+
+
+.pc-shell{
+  display: block; /* SPは普通に縦に流す */
+}
+
+.pc-shell__left,
+.pc-shell__right{
+  display: none !important;  /* SPは左右を消す */
+}
+
+
+/* PCだけ3レーン */
+@media screen and (min-width: 1024px){
+  .pc-shell{
+    display: grid;
+    grid-template-columns: 1fr 550px 1fr;
+    min-height: 100vh;
+    align-items: center;
+
+  }
+
+  .pc-shell__left,
+  .pc-shell__right{
+    min-height: 100vh;
+    position: sticky;
+    top:0;
+    display: flex !important;     /* ← 最終手段：確実に勝たせる */
+    align-items: center !important;
+    justify-content: center !important;
+    background: url("/assets/img/bg.webp") center / cover no-repeat;
+  }
+}
+
+/* 中央：スマホ幅を固定して“端末っぽく” */
+  .pc-shell__center{
+    width: 420px;         /* 375〜420で調整 */
+    margin: 0 auto;
+    border-radius: 18px;  /* お好み */
+    box-shadow: 0 20px 60px rgba(0,0,0,.18);
+    overflow: hidden;     /* 中身が角丸からはみ出さない */
+    background: #fff;     /* 背景が白いUIなら */
+  }
+
+  /* 左ロゴ */
+  .pc-shell__left{
+    position: sticky;
+    padding-top: 24px;
+    align-self: start;
+  }
+  .pc-shell__logo{
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 0 64px 0;
+  }
+
+  /* 右CTA */
+  .pc-shell__right{
+    position: sticky;
+    padding-top: 24px;
+    align-self: start;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .pc-shell__cta img{
+    width: 360px;   /* CTA画像の見え方調整 */
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 0 64px 0;
+    
+  }
+
+
+  
+  
+  

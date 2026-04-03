@@ -1,0 +1,53 @@
+<style>
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: sans-serif;
+  }
+
+  .login {
+    width: 300px;
+  }
+
+  .login input,
+  .login button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .login button {
+    margin-top: 8px;
+  }
+
+  .err {
+    margin-top: 8px;
+    color: red;
+  }
+</style>
+
+<div class="login">
+  <input id="pw" type="password" placeholder="Password" />
+  <button id="go">Login</button>
+  <p id="err" class="err" style="display:none;">パスワードが違います</p>
+</div>
+
+<script type="module">
+  import { login } from "./assets/js/auth.js";
+
+  const btn = document.getElementById("go");
+  const pw = document.getElementById("pw");
+  const err = document.getElementById("err");
+
+  const run = () => {
+    const ok = login(pw.value);
+    if (!ok) err.style.display = "block";
+  };
+
+  btn.addEventListener("click", run);
+  pw.addEventListener("keydown", e => {
+    if (e.key === "Enter") run();
+  });
+</script>

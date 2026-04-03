@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <title>LP Title</title>
+  <meta name="description" content="LPの説明文をここに。" />
+
+  <!-- OGP -->
+  <meta property="og:title" content="LP Title" />
+  <meta property="og:description" content="LPの説明文をここに。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./assets/img/og.png" />
+
+  <link rel="preload" href="./assets/css/style.css" as="style" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+
+  <!-- フォント指定 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg">
+<!-- テスト環境用ログインフォーム -->
+<script type="module">
+  import { requireAuth } from "./assets/js/auth.js";
+  requireAuth();
+</script>
+<!-- 本番の時に消す -->
+
+  <div class="pc-shell">
+    <!-- 左 -->
+    <aside class="pc-shell__left">
+      <a href="#top">
+      <img src="./assets/img/logo_tate.webp" alt="VIDGET" class="pc-shell__logo target">
+      </a>
+    </aside>
+
+    <div class="container">
+      <header class="header">
+        <div class="header_inner">
+          <a href="./index.html#top" class="logo target">
+            <img src="./assets/img/logo_yoko.webp" alt="VIDGET" width="150" height="40" />
+          </a>
+          <a href="#contact" class="contact_button target">
+            <img src="./assets/img//icon/mail.svg" width="24" height="24" />
+            お問い合わせ
+          </a>
+        </div>
+      </header>
+
+      <main id="top" class="lp">
+
+        <section class="blk">
+          <img src="./assets/img/01-fv.webp" alt="サービスのファーストビュー" width="750" height="1200">
+        </section>
+
+        <section class="blk blk--accent" id="cta">
+          <div class="cta-frame">
+            <img src="./assets/img/06-cta-button.webp" alt="資料請求への導線" width="750" height="900">
+
+            <a href="#contact" class="cta-btn target">
+              資料請求へ
+              <img src="./assets/img/icon/expand_circle_right.svg" alt="" class="cta-btnIcon">
+            </a>
+          </div>
+        </section>
+
+
+        <section class="blk">
+          <img src="./assets/img/02-problem.webp" alt="採用サイトの課題提起" width="750" height="1800">
+        </section>
+
+        <section class="blk">
+          <img src="./assets/img/03-evidence.webp" alt="動画の効果に関する訴求" width="750" height="1800">
+        </section>
+
+        <section class="blk">
+          <img src="./assets/img/04-cost.webp" alt="採用ミスマッチのコストに関する訴求" width="750" height="1800">
+        </section>
+
+        <section class="blk">
+          <img src="./assets/img/05-solution-vidget.webp" alt="縦型動画ウィジェットの紹介" width="750" height="1800">
+          <video class="solution-video__media" src="./assets/video/05-2-solution-vidget.mp4" width="750" height="1800"
+            autoplay loop muted playsinline>
+            <p>お使いのブラウザは動画タグに対応していません。</p>
+          </video>
+          <video class="solution-video__media" src="./assets/video/05-3-solution-vidget.mp4" width="750" height="1800"
+            autoplay loop muted playsinline>
+            <p>お使いのブラウザは動画タグに対応していません。</p>
+          </video>
+          <video class="solution-video__media" src="./assets/video/05-4-solution-vidget.mp4" width="750" height="1800"
+            autoplay loop muted playsinline>
+            <p>お使いのブラウザは動画タグに対応していません。</p>
+          </video>
+          <img src="./assets/img/05-5-solution-vidget.webp" alt="縦型動画ウィジェットの紹介" width="750" height="1800">
+        </section>
+
+        <section class="blk blk--accent" id="cta">
+          <div class="cta-frame">
+            <img src="./assets/img/06-cta-button.webp" alt="資料請求への導線" width="750" height="900">
+
+            <a href="#contact" class="cta-btn target">
+              資料請求へ
+              <img src="./assets/img/icon/expand_circle_right.svg" alt="" class="cta-btnIcon">
+            </a>
+          </div>
+        </section>
+
+        <section class="faq" aria-label="よくあるご質問">
+          <h2 class="faq__title">よくあるご質問</h2>
+
+          <div class="faq__list">
+            <details class="faq__item" open>
+              <summary class="faq__q">
+                <span class="faq__qleft">
+                  <span class="faq__badge">Q</span>
+                  <span class="faq__qtext">動画を導入するだけで、本当に採用効果は変わりますか？</span>
+                </span>
+                <span class="faq__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq__a">
+                <div class="faq__ahead">
+                  <span class="faq__badge faq__badge--a">A</span>
+                </div>
+                <p class="faq__atext">
+                  はい、大きく変わります。テキストのみのページと比較して、動画を配置することで反応率が向上したというデータがあるとされています。
+                  文字だけでは伝わりにくい社風や働く人の雰囲気を視覚的に確認できることで、安心感と応募意欲につながる可能性があります。
+                </p>
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__q">
+                <span class="faq__qleft">
+                  <span class="faq__badge">Q</span>
+                  <span class="faq__qtext">動画制作のスキルがなくても、簡単に運用できますか？</span>
+                </span>
+                <span class="faq__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq__a">
+                <div class="faq__ahead">
+                  <span class="faq__badge faq__badge--a">A</span>
+                </div>
+                <p class="faq__atext">
+                  もちろんです。専門的な知識は必要ありません。本ツールは「ドラッグ＆ドロップ」で簡単に動画を掲載できる設計になっています。SNSに投稿するような感覚で、誰でも直感的にホームページをアップデートすることが可能です。
+                </p>
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__q">
+                <span class="faq__qleft">
+                  <span class="faq__badge">Q</span>
+                  <span class="faq__qtext">どのような動画を掲載するのが効果的ですか？</span>
+                </span>
+                <span class="faq__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq__a">
+                <div class="faq__ahead">
+                  <span class="faq__badge faq__badge--a">A</span>
+                </div>
+                <p class="faq__atext">
+                  社内のリアルな雰囲気が伝わる「インタビュー動画」や「オフィスツアー」、1日の流れを紹介する「ショートドキュメンタリー」などがおすすめです。サービスローンチ記念として、今なら導入時の動画構成サポートも無料で実施しておりますので、ぜひご相談ください。
+                </p>
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__q">
+                <span class="faq__qleft">
+                  <span class="faq__badge">Q</span>
+                  <span class="faq__qtext">導入することで、採用後のミスマッチは防げますか？</span>
+                </span>
+                <span class="faq__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq__a">
+                <div class="faq__ahead">
+                  <span class="faq__badge faq__badge--a">A</span>
+                </div>
+                <p class="faq__atext">
+                  非常に高い効果が期待できます。求職者が事前に「実際の社風」を動画で理解することで、「イメージと違う」という早期離職のリスクを最小限に抑えることができます。1人離職するごとに発生すると言われる「約187万円の損害」を未然に防ぐための強力な対策となります。
+                </p>
+              </div>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__q">
+                <span class="faq__qleft">
+                  <span class="faq__badge">Q</span>
+                  <span class="faq__qtext">すでにあるホームページに組み込むのは大変ですか？</span>
+                </span>
+                <span class="faq__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq__a">
+                <div class="faq__ahead">
+                  <span class="faq__badge faq__badge--a">A</span>
+                </div>
+                <p class="faq__atext">
+                  いいえ、既存のサイトに簡単に設置できる仕様です。ホームページの隅にリンクボタンが付属する動画ウィジェット形式のため、サイト全体のデザインを崩すことなく、スムーズに導入いただけます。
+                </p>
+              </div>
+            </details>
+
+
+            <details class="faq__item">
+              <summary class="faq__q">
+                <span class="faq__qleft">
+                  <span class="faq__badge">Q</span>
+                  <span class="faq__qtext">動画を持っていないのですが、導入できますか？</span>
+                </span>
+                <span class="faq__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq__a">
+                <div class="faq__ahead">
+                  <span class="faq__badge faq__badge--a">A</span>
+                </div>
+                <p class="faq__atext">
+                  はい、問題なく導入できます。<br>動画をお持ちでない場合は、当社で対応可能ございますので、お気軽にお問い合わせにご相談ください。
+                </p>
+              </div>
+            </details>
+
+          </div>
+        </section>
+
+        <section class="contact" id="contact" aria-label="お問い合わせ">
+          <div class="contact__head">
+            <h2 class="contact__title">お問い合わせ</h2>
+            <p class="contact__sub">フォームに必要事項を入力してください。</p>
+          </div>
+
+          <form class="contact__form" action="thanks.html" method="get">
+            <div class="field">
+              <label class="field__label" for="company">企業名<span class="req">*</span></label>
+              <input class="field__input" id="company" name="company" type="text" placeholder="株式会社Deep Labo" required>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="name">お名前<span class="req">*</span></label>
+              <input class="field__input" id="name" name="name" type="text" placeholder="山田太郎" required>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="email">メールアドレス<span class="req">*</span></label>
+              <input class="field__input" id="email" name="email" type="email" placeholder="info@gmail.com" required>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="tel">電話番号<span class="req">*</span></label>
+              <input class="field__input" id="tel" name="tel" type="tel" placeholder="08012345678" required>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="message">お問い合わせ内容<span class="req">*</span></label>
+              <textarea class="field__textarea" id="message" name="message" rows="10" placeholder="導入のご相談や動画制作・サービス説明をご希望の方、ご不明な点がある方はこちらへご入力ください"
+                required></textarea>
+            </div>
+
+            <button class="contact__submit target" type="submit">
+              送信する
+              <img src="./assets/img/icon/expand_circle_right_white.svg" alt="" class="btn-icon">
+            </button>
+          </form>
+        </section>
+      </main>
+
+      <footer class="footer" aria-label="フッター">
+          <div class="footer_inner">
+              <a href="#top" class="footer__inner logo target">
+                  <img
+                  src="./assets/img/logo_yoko.webp"
+                  alt="VIDGET"
+                  />
+              </a>
+              <nav class="footer__nav target" aria-label="フッターナビ">
+                  <a href="https://deeplabs.co.jp/privacy-policy/">プライバシーポリシー</a>
+                  <a href="https://deeplabs.co.jp/tokushoho/">特定商取引法に基づく表記</a>
+              </nav>
+              <small>©  All Rights Reserved.</small>
+          </div>
+      </footer>
+      <script src="./assets/js/main.js" defer></script>
+    </div>
+    <div class="sp-fixed-banner">
+      <a href="#contact">
+        <img src="./assets/img/cta_banner.webp" alt="資料請求はこちら">
+      </a>
+    </div>
+
+    <aside class="pc-shell__right">
+      <a href="#contact" class="pc-shell__cta target">
+        <img src="./assets/img/cta-button.webp" alt="資料請求キャンペーン">
+      </a>
+    </aside>
+  </div>
+</body>
+</html>
