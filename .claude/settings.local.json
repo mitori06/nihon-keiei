@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m ':*)",
+      "Bash(git push:*)",
+      "Bash(python3 -m http.server 8080 --directory /Users/mitori/Desktop/001_会社/002_社外/007_日本経営/nihon-keiei_lp)",
+      "Bash(gh api:*)",
+      "mcp__claude_ai_Figma__get_design_context",
+      "Bash(curl -sL \"https://www.figma.com/api/mcp/asset/bc46686e-a562-4b88-bdcc-561482a794f6\" -o \"06-bg.webp\")",
+      "Bash(curl -sL \"https://www.figma.com/api/mcp/asset/3ed81f92-5b1b-4f82-8765-4027c3015cdb\" -o \"06-title-badge.webp\")",
+      "Bash(curl -sL \"https://www.figma.com/api/mcp/asset/76b798d4-0c27-4403-b272-50381a5504b3\" -o \"06-achievement-01.webp\")",
+      "Bash(curl -sL \"https://www.figma.com/api/mcp/asset/4ab26236-add8-43dc-9053-195bfcd9433f\" -o \"06-achievement-02.webp\")",
+      "Bash(curl -sL \"https://www.figma.com/api/mcp/asset/d6aad371-9f46-4ed8-80c8-076518543b02\" -o \"06-achievement-03.webp\")",
+      "Bash(docker --version)"
+    ]
+  }
+}

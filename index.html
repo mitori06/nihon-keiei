@@ -46,244 +46,140 @@
           <a href="./index.html#top" class="logo target">
             <img src="./assets/img/logo_yoko.webp" alt="VIDGET" width="150" height="40" />
           </a>
-          <a href="#contact" class="contact_button target">
-            <img src="./assets/img//icon/mail.svg" width="24" height="24" />
-            お問い合わせ
-          </a>
+          <button class="hamburger-btn" id="hamburgerBtn" aria-label="メニューを開く">
+            <img src="./assets/img/icon/hamburger.svg" width="40" height="40" />
+          </button>
         </div>
       </header>
 
       <main id="top" class="lp">
 
-        <section class="blk">
+        <section class="blk blk--fv">
           <img src="./assets/img/01-fv.webp" alt="サービスのファーストビュー" width="750" height="1200">
         </section>
 
-        <section class="blk blk--accent" id="cta">
-          <div class="cta-frame">
-            <img src="./assets/img/06-cta-button.webp" alt="資料請求への導線" width="750" height="900">
+        <section class="blk blk--problem">
+          <img src="./assets/img/02_problem.webp" alt="課題提起" width="750">
+        </section>
 
-            <a href="#contact" class="cta-btn target">
-              資料請求へ
-              <img src="./assets/img/icon/expand_circle_right.svg" alt="" class="cta-btnIcon">
+        <section class="blk blk--introduction">
+          <img src="./assets/img/03_introduction.webp" alt="日本経営について" width="750">
+        </section>
+
+        <section class="blk blk--cta blk--business" id="business">
+          <img src="./assets/img/04_business.webp" alt="事業内容" width="750">
+          <div class="inline-cta">
+            <a href="#contact" class="inline-cta__banner target">
+              <img src="./assets/img/cta_button.webp" alt="まずは話を聞いてみる" width="750">
             </a>
           </div>
         </section>
 
-
-        <section class="blk">
-          <img src="./assets/img/02-problem.webp" alt="採用サイトの課題提起" width="750" height="1800">
+        <section class="blk blk--point" id="point">
+          <img src="./assets/img/05_point.webp" alt="ポイント" width="750">
         </section>
 
-        <section class="blk">
-          <img src="./assets/img/03-evidence.webp" alt="動画の効果に関する訴求" width="750" height="1800">
+        <section class="achievements">
+
+          <div class="achievements__inner">
+            <!-- タイトル -->
+            <img src="./assets/img/achievement/achievement_title.webp" alt="これまでの実績" class="achievements__title">
+
+            <!-- グループ01 収益改善事例 -->
+            <div class="achievements__group">
+              <img src="./assets/img/achievement/achievement_01.webp" alt="" class="achievements__card-bg" aria-hidden="true">
+              <div class="achievements__items">
+                <div class="achievements__item">
+                  <img src="./assets/img/achievement/pdf_1.webp" alt="収益改善事例01" class="achievements__pdf">
+                  <p class="achievements__item-title">大規模事業所を複数所持する<br>社会福祉法人の経営難改善</p>
+                  <a href="https://nkgr.co.jp/wp-content/uploads/2022/06/ae1bc188b7bc0ab82569b16a654b368b.pdf" class="achievements__item-url" target="_blank" rel="noopener">https://nkgr.co.jp/wp-content/uploads/2022/06/ae1bc188b7bc0ab82569b16a654b368b.pdf</a>
+                </div>
+                <div class="achievements__item">
+                  <img src="./assets/img/achievement/pdf_2.webp" alt="収益改善事例02" class="achievements__pdf">
+                  <p class="achievements__item-title">介護事業所における<br>中期経営計画改善</p>
+                  <a href="https://nkgr.co.jp/wp-content/uploads/2022/04/fc8771e2aa3c49ed420ebe7e18569f61.pdf" class="achievements__item-url" target="_blank" rel="noopener">https://nkgr.co.jp/wp-content/uploads/2022/04/fc8771e2aa3c49ed420ebe7e18569f61.pdf</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- グループ02 現場改善事例 -->
+            <div class="achievements__group achievements__group--right">
+              <img src="./assets/img/achievement/achievement_02.webp" alt="" class="achievements__card-bg" aria-hidden="true">
+              <div class="achievements__items achievements__items--right">
+                <div class="achievements__item">
+                  <img src="./assets/img/achievement/pdf_3.webp" alt="現場改善事例01" class="achievements__pdf">
+                  <p class="achievements__item-title">ICTからの業務効率化事例</p>
+                  <a href="https://nkgr.co.jp/wp-content/uploads/2022/08/dd4ec7a607c1fa61826ee1a1bae36d5f.pdf" class="achievements__item-url" target="_blank" rel="noopener">https://nkgr.co.jp/wp-content/uploads/2022/08/dd4ec7a607c1fa61826ee1a1bae36d5f.pdf</a>
+                </div>
+                <div class="achievements__item">
+                  <img src="./assets/img/achievement/pdf_4.webp" alt="現場改善事例02" class="achievements__pdf">
+                  <p class="achievements__item-title">自立支援介護と施設経営の健全化</p>
+                  <a href="https://nkgr.co.jp/wp-content/uploads/2024/05/defb79d4efc31a4a6578981f91694ea4.pdf" class="achievements__item-url" target="_blank" rel="noopener">https://nkgr.co.jp/wp-content/uploads/2024/05/defb79d4efc31a4a6578981f91694ea4.pdf</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- グループ03 組織改善事例 -->
+            <div class="achievements__group">
+              <img src="./assets/img/achievement/achievement_03.webp" alt="" class="achievements__card-bg" aria-hidden="true">
+              <div class="achievements__items">
+                <div class="achievements__item">
+                  <img src="./assets/img/achievement/pdf_5.webp" alt="組織改善事例01" class="achievements__pdf">
+                  <p class="achievements__item-title">優秀者の離職ゼロ、20代・30代の離職ゼロを達成した現場の介護職員が納得して働ける人事制度とは</p>
+                  <a href="https://nkgr.co.jp/wp-content/uploads/2021/12/6043945a2802ad8a32526b6a9acb8487.pdf" class="achievements__item-url" target="_blank" rel="noopener">https://nkgr.co.jp/wp-content/uploads/2021/12/6043945a2802ad8a32526b6a9acb8487.pdf</a>
+                </div>
+                <div class="achievements__item">
+                  <img src="./assets/img/achievement/pdf_6.webp" alt="組織改善事例02" class="achievements__pdf">
+                  <p class="achievements__item-title">危機感に乏しい現場に火をつける！経営意識改革人事</p>
+                  <a href="https://nkgr.co.jp/wp-content/uploads/2022/01/d30148b149494e8c1873f647380738a8.pdf" class="achievements__item-url" target="_blank" rel="noopener">https://nkgr.co.jp/wp-content/uploads/2022/01/d30148b149494e8c1873f647380738a8.pdf</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </section>
 
-        <section class="blk">
-          <img src="./assets/img/04-cost.webp" alt="採用ミスマッチのコストに関する訴求" width="750" height="1800">
-        </section>
-
-        <section class="blk">
-          <img src="./assets/img/05-solution-vidget.webp" alt="縦型動画ウィジェットの紹介" width="750" height="1800">
-          <video class="solution-video__media" src="./assets/video/05-2-solution-vidget.mp4" width="750" height="1800"
-            autoplay loop muted playsinline>
-            <p>お使いのブラウザは動画タグに対応していません。</p>
-          </video>
-          <video class="solution-video__media" src="./assets/video/05-3-solution-vidget.mp4" width="750" height="1800"
-            autoplay loop muted playsinline>
-            <p>お使いのブラウザは動画タグに対応していません。</p>
-          </video>
-          <video class="solution-video__media" src="./assets/video/05-4-solution-vidget.mp4" width="750" height="1800"
-            autoplay loop muted playsinline>
-            <p>お使いのブラウザは動画タグに対応していません。</p>
-          </video>
-          <img src="./assets/img/05-5-solution-vidget.webp" alt="縦型動画ウィジェットの紹介" width="750" height="1800">
-        </section>
-
-        <section class="blk blk--accent" id="cta">
-          <div class="cta-frame">
-            <img src="./assets/img/06-cta-button.webp" alt="資料請求への導線" width="750" height="900">
-
-            <a href="#contact" class="cta-btn target">
-              資料請求へ
-              <img src="./assets/img/icon/expand_circle_right.svg" alt="" class="cta-btnIcon">
+        <section class="voice" id="voice">
+          <img src="./assets/img/voice/voice_bg.webp" alt="" class="voice__bg" aria-hidden="true">
+          <img src="./assets/img/voice/voice_main.webp" alt="社員の声" class="voice__main">
+          <div class="inline-cta">
+            <a href="#contact" class="inline-cta__banner target">
+              <img src="./assets/img/cta_button.webp" alt="まずは話を聞いてみる" width="750">
             </a>
           </div>
         </section>
 
-        <section class="faq" aria-label="よくあるご質問">
-          <h2 class="faq__title">よくあるご質問</h2>
+        <section class="blk blk--person" id="person">
+          <img src="./assets/img/08_person.webp" alt="求める人物像" width="750">
+        </section>
 
-          <div class="faq__list">
-            <details class="faq__item" open>
-              <summary class="faq__q">
-                <span class="faq__qleft">
-                  <span class="faq__badge">Q</span>
-                  <span class="faq__qtext">動画を導入するだけで、本当に採用効果は変わりますか？</span>
-                </span>
-                <span class="faq__icon" aria-hidden="true"></span>
-              </summary>
-              <div class="faq__a">
-                <div class="faq__ahead">
-                  <span class="faq__badge faq__badge--a">A</span>
-                </div>
-                <p class="faq__atext">
-                  はい、大きく変わります。テキストのみのページと比較して、動画を配置することで反応率が向上したというデータがあるとされています。
-                  文字だけでは伝わりにくい社風や働く人の雰囲気を視覚的に確認できることで、安心感と応募意欲につながる可能性があります。
-                </p>
-              </div>
-            </details>
-
-            <details class="faq__item">
-              <summary class="faq__q">
-                <span class="faq__qleft">
-                  <span class="faq__badge">Q</span>
-                  <span class="faq__qtext">動画制作のスキルがなくても、簡単に運用できますか？</span>
-                </span>
-                <span class="faq__icon" aria-hidden="true"></span>
-              </summary>
-              <div class="faq__a">
-                <div class="faq__ahead">
-                  <span class="faq__badge faq__badge--a">A</span>
-                </div>
-                <p class="faq__atext">
-                  もちろんです。専門的な知識は必要ありません。本ツールは「ドラッグ＆ドロップ」で簡単に動画を掲載できる設計になっています。SNSに投稿するような感覚で、誰でも直感的にホームページをアップデートすることが可能です。
-                </p>
-              </div>
-            </details>
-
-            <details class="faq__item">
-              <summary class="faq__q">
-                <span class="faq__qleft">
-                  <span class="faq__badge">Q</span>
-                  <span class="faq__qtext">どのような動画を掲載するのが効果的ですか？</span>
-                </span>
-                <span class="faq__icon" aria-hidden="true"></span>
-              </summary>
-              <div class="faq__a">
-                <div class="faq__ahead">
-                  <span class="faq__badge faq__badge--a">A</span>
-                </div>
-                <p class="faq__atext">
-                  社内のリアルな雰囲気が伝わる「インタビュー動画」や「オフィスツアー」、1日の流れを紹介する「ショートドキュメンタリー」などがおすすめです。サービスローンチ記念として、今なら導入時の動画構成サポートも無料で実施しておりますので、ぜひご相談ください。
-                </p>
-              </div>
-            </details>
-
-            <details class="faq__item">
-              <summary class="faq__q">
-                <span class="faq__qleft">
-                  <span class="faq__badge">Q</span>
-                  <span class="faq__qtext">導入することで、採用後のミスマッチは防げますか？</span>
-                </span>
-                <span class="faq__icon" aria-hidden="true"></span>
-              </summary>
-              <div class="faq__a">
-                <div class="faq__ahead">
-                  <span class="faq__badge faq__badge--a">A</span>
-                </div>
-                <p class="faq__atext">
-                  非常に高い効果が期待できます。求職者が事前に「実際の社風」を動画で理解することで、「イメージと違う」という早期離職のリスクを最小限に抑えることができます。1人離職するごとに発生すると言われる「約187万円の損害」を未然に防ぐための強力な対策となります。
-                </p>
-              </div>
-            </details>
-            <details class="faq__item">
-              <summary class="faq__q">
-                <span class="faq__qleft">
-                  <span class="faq__badge">Q</span>
-                  <span class="faq__qtext">すでにあるホームページに組み込むのは大変ですか？</span>
-                </span>
-                <span class="faq__icon" aria-hidden="true"></span>
-              </summary>
-              <div class="faq__a">
-                <div class="faq__ahead">
-                  <span class="faq__badge faq__badge--a">A</span>
-                </div>
-                <p class="faq__atext">
-                  いいえ、既存のサイトに簡単に設置できる仕様です。ホームページの隅にリンクボタンが付属する動画ウィジェット形式のため、サイト全体のデザインを崩すことなく、スムーズに導入いただけます。
-                </p>
-              </div>
-            </details>
-
-
-            <details class="faq__item">
-              <summary class="faq__q">
-                <span class="faq__qleft">
-                  <span class="faq__badge">Q</span>
-                  <span class="faq__qtext">動画を持っていないのですが、導入できますか？</span>
-                </span>
-                <span class="faq__icon" aria-hidden="true"></span>
-              </summary>
-              <div class="faq__a">
-                <div class="faq__ahead">
-                  <span class="faq__badge faq__badge--a">A</span>
-                </div>
-                <p class="faq__atext">
-                  はい、問題なく導入できます。<br>動画をお持ちでない場合は、当社で対応可能ございますので、お気軽にお問い合わせにご相談ください。
-                </p>
-              </div>
-            </details>
-
+        <section class="blk blk--cta blk--requirements" id="requirements">
+          <img src="./assets/img/09_requirements.webp" alt="募集要項" width="750">
+          <div class="inline-cta">
+            <a href="#contact" class="inline-cta__banner target">
+              <img src="./assets/img/cta_button.webp" alt="まずは話を聞いてみる" width="750">
+            </a>
           </div>
         </section>
 
-        <section class="contact" id="contact" aria-label="お問い合わせ">
-          <div class="contact__head">
-            <h2 class="contact__title">お問い合わせ</h2>
-            <p class="contact__sub">フォームに必要事項を入力してください。</p>
+        <section class="qa" id="qa">
+          <img src="./assets/img/10_q&a.webp" alt="よくあるご質問" class="qa__img">
+          <div class="qa__cta">
+            <a href="#contact" class="inline-cta__banner target">
+              <img src="./assets/img/cta_button.webp" alt="まずは話を聞いてみる" width="750">
+            </a>
           </div>
-
-          <form class="contact__form" action="thanks.html" method="get">
-            <div class="field">
-              <label class="field__label" for="company">企業名<span class="req">*</span></label>
-              <input class="field__input" id="company" name="company" type="text" placeholder="株式会社Deep Labo" required>
-            </div>
-
-            <div class="field">
-              <label class="field__label" for="name">お名前<span class="req">*</span></label>
-              <input class="field__input" id="name" name="name" type="text" placeholder="山田太郎" required>
-            </div>
-
-            <div class="field">
-              <label class="field__label" for="email">メールアドレス<span class="req">*</span></label>
-              <input class="field__input" id="email" name="email" type="email" placeholder="info@gmail.com" required>
-            </div>
-
-            <div class="field">
-              <label class="field__label" for="tel">電話番号<span class="req">*</span></label>
-              <input class="field__input" id="tel" name="tel" type="tel" placeholder="08012345678" required>
-            </div>
-
-            <div class="field">
-              <label class="field__label" for="message">お問い合わせ内容<span class="req">*</span></label>
-              <textarea class="field__textarea" id="message" name="message" rows="10" placeholder="導入のご相談や動画制作・サービス説明をご希望の方、ご不明な点がある方はこちらへご入力ください"
-                required></textarea>
-            </div>
-
-            <button class="contact__submit target" type="submit">
-              送信する
-              <img src="./assets/img/icon/expand_circle_right_white.svg" alt="" class="btn-icon">
-            </button>
-          </form>
         </section>
+
       </main>
 
       <footer class="footer" aria-label="フッター">
-          <div class="footer_inner">
-              <a href="#top" class="footer__inner logo target">
-                  <img
-                  src="./assets/img/logo_yoko.webp"
-                  alt="VIDGET"
-                  />
-              </a>
-              <nav class="footer__nav target" aria-label="フッターナビ">
-                  <a href="https://deeplabs.co.jp/privacy-policy/">プライバシーポリシー</a>
-                  <a href="https://deeplabs.co.jp/tokushoho/">特定商取引法に基づく表記</a>
-              </nav>
-              <small>©  All Rights Reserved.</small>
-          </div>
+        <img src="./assets/img/logo_white.webp" alt="NK GROUP 日本経営" class="footer__logo">
+        <div class="footer__nav">
+          <a href="https://nkgr.co.jp/" class="footer__link" target="_blank" rel="noopener">コーポレートサイト</a>
+          <small class="footer__copy">©NIHONKEIEI GROUP</small>
+        </div>
       </footer>
-      <script src="./assets/js/main.js" defer></script>
     </div>
     <div class="sp-fixed-banner">
       <a href="#contact">
@@ -297,5 +193,23 @@
       </a>
     </aside>
   </div>
+
+  <!-- ハンバーガーモーダル -->
+  <div class="nav-modal" id="navModal">
+    <div class="nav-modal__inner">
+      <button class="nav-modal__close" id="navModalClose" aria-label="メニューを閉じる">
+        <img src="./assets/img/icon/close.svg" width="40" height="40" />
+      </button>
+      <nav class="nav-modal__nav">
+        <a href="#business" class="nav-modal__link target">私たちの仕事について</a>
+        <a href="#point" class="nav-modal__link target">日本経営の魅力</a>
+        <a href="#voice" class="nav-modal__link target">社員の声</a>
+        <a href="#person" class="nav-modal__link target">求める人物像</a>
+        <a href="#requirements" class="nav-modal__link target">募集要項</a>
+        <a href="#qa" class="nav-modal__link target">よくあるご質問</a>
+      </nav>
+    </div>
+  </div>
+  <script src="./assets/js/main.js"></script>
 </body>
 </html>
