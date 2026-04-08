@@ -276,7 +276,7 @@ body {
   background-image:
     linear-gradient(rgba(180, 210, 230, 0.3) 1px, transparent 1px),
     linear-gradient(90deg, rgba(180, 210, 230, 0.3) 1px, transparent 1px);
-  background-size: calc(100% / 14) calc(100vw / 14);
+  background-size: calc(100vw / 14) calc(100vw / 14);
 }
 
 .voice__main {
@@ -303,8 +303,8 @@ body {
   background-image:
     linear-gradient(rgba(180, 210, 230, 0.3) 1px, transparent 1px),
     linear-gradient(90deg, rgba(180, 210, 230, 0.3) 1px, transparent 1px);
-  background-size: calc(100% / 14) calc(100vw / 14);
-  padding: 108px 21px 48px;
+  background-size: calc(100vw / 14) calc(100vw / 14);
+  padding: 108px 21px 64px;
 }
 
 .requirements__box {
@@ -409,7 +409,7 @@ details[open] > .requirements__q::after {
 }
 
 .requirements__cta {
-  padding: 21px 0 96px;
+  padding: 21px 0 0;
 }
 
 .requirements__cta img {
