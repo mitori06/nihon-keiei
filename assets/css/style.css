@@ -1,19 +1,20 @@
+/* ===== リセット・ベース ===== */
 html {
   scroll-behavior: smooth;
 }
 
-body{
-    margin: 0;
-    font-family:
-      "Noto Sans JP",
-      -apple-system,
-      BlinkMacSystemFont,
-      "Helvetica Neue",
-      "Hiragino Kaku Gothic ProN",
-      "Hiragino Sans",
-      "Yu Gothic",
-      "Meiryo",
-      sans-serif;
+body {
+  margin: 0;
+  font-family:
+    "Noto Sans JP",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Helvetica Neue",
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    "Yu Gothic",
+    "Meiryo",
+    sans-serif;
 }
 
 .target {
@@ -24,37 +25,30 @@ body{
   opacity: 0.6;
 }
 
-@media screen and (min-width: 1024px){
-.container{
-  border-left: 1.5px solid rgb(0, 7, 131);
-  border-right: 1.5px solid rgb(0, 7, 131);
-  }
-
-.hamburger-btn,
-.nav-modal {
-  display: none !important;
-  }
+/* ===== ヘッダー ===== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: transparent;
+  box-shadow: none;
+  margin-bottom: -68px;
 }
 
-.header{
-    position: sticky;
-    top: 0;
-    z-index:999;
-    background: transparent;
-    box-shadow: none;
-    margin-bottom: -68px;
-    }
+.header_inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px;
+}
 
-  
-.header_inner{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  
-    padding: 14px 14px;
-  }
-  
-/* ハンバーガーボタン */
+.logo img {
+  height: 32px;
+  width: auto;
+  display: block;
+}
+
+/* ===== ハンバーガーボタン ===== */
 .hamburger-btn {
   background: none;
   border: none;
@@ -64,7 +58,7 @@ body{
   align-items: center;
 }
 
-/* ナビモーダル */
+/* ===== ナビモーダル ===== */
 .nav-modal {
   display: none;
   position: fixed;
@@ -87,21 +81,13 @@ body{
 }
 
 @keyframes blindDown {
-  from {
-    clip-path: inset(0 0 100% 0);
-  }
-  to {
-    clip-path: inset(0 0 0% 0);
-  }
+  from { clip-path: inset(0 0 100% 0); }
+  to   { clip-path: inset(0 0 0% 0); }
 }
 
 @keyframes blindUp {
-  from {
-    clip-path: inset(0 0 0% 0);
-  }
-  to {
-    clip-path: inset(0 0 100% 0);
-  }
+  from { clip-path: inset(0 0 0% 0); }
+  to   { clip-path: inset(0 0 100% 0); }
 }
 
 .nav-modal__inner {
@@ -159,81 +145,157 @@ body{
   background-clip: text;
 }
 
-  /* ロゴ */
-  .logo img{
-    height: 32px;
-    width: auto;
-    display: block;
-}
-  
-  /* CTA */
-  .contact_button{
-    display: flex;
-    justify-content: center;
-    gap: 7px;
-    padding: 10px 18px;
-    border-radius: 99px;
-  
-    background: linear-gradient(
-      95deg,
-      #002A5A 0.16%,
-      #004CA3 99.84%
-    );
-  
-    color: #fff;
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: none;
-  
-    box-shadow: 0 2px 2px rgba(0,0,0,0.25);
-    white-space: nowrap;
- }
-
- /* 全体 */
-.lp{
-    background: #fff;
-  }
-  
-  /* 各画像ブロック */
-  .blk img{
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-
-  .solution-video__media{
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-
-  .blk-accent {
-    background: linear-gradient(347deg, #002A5A 20.17%, #004CA3 79.83%);
+/* ===== LP 全体 ===== */
+.lp {
+  background: #fff;
 }
 
-.blk--overlap {
-  margin-top: -68px;
+/* ===== 各画像ブロック ===== */
+.blk {
+  position: relative;
 }
 
-/* セクションz-index（上のセクションが下のセクションに重なる） */
-.blk { position: relative; }
+.blk img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .blk--fv           { z-index: 9; }
 .blk--problem      { z-index: 8; }
 .blk--introduction { z-index: 7; margin-top: -200px; }
 .blk--business     { z-index: 6; background: #fff; }
+.blk--point        { z-index: 5; }
+.blk--person       { z-index: 2; }
+
+/* ===== ビジネスCTA ===== */
 .business__cta {
   padding: 0 11px 96px;
 }
+
 .business__cta img {
   display: block;
   width: 100%;
   height: auto;
 }
-.blk--point        { z-index: 5; margin-top: 0; }
-.blk--achievements { z-index: 4; }
-.voice             { z-index: 3; }
-.blk--person       { z-index: 2; }
-/* ===== requirements ===== */
+
+/* ===== 実績 ===== */
+.achievements {
+  position: relative;
+  margin-top: -68px;
+  z-index: 4;
+  background-image: url('../img/achievement/achievements_bg.webp');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.achievements__inner {
+  padding-top: 106px;
+}
+
+.achievements__title {
+  display: block;
+  width: calc(100% - 42px);
+  height: auto;
+  margin: 0 21px 56px;
+}
+
+.achievements__group {
+  position: relative;
+  margin-top: 56px;
+}
+
+.achievements__group:first-of-type {
+  margin-top: 0;
+}
+
+.achievements__card-bg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.achievements__items {
+  position: absolute;
+  bottom: 120px;
+  left: 36px;
+  right: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 49px;
+}
+
+.achievements__item {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.achievements__group--right .achievements__item {
+  align-self: flex-end;
+}
+
+.achievements__pdf {
+  display: block;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 1px 4px rgba(120, 120, 120, 0.25);
+}
+
+.achievements__item-title {
+  margin: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.6;
+  letter-spacing: 0.36px;
+}
+
+.achievements__item-url {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: underline;
+  line-height: 1.6;
+  letter-spacing: 0.28px;
+  word-break: break-all;
+  transition: opacity 0.2s ease;
+}
+
+.achievements__item-url:hover {
+  opacity: 0.6;
+}
+
+/* ===== 社員の声 ===== */
+.voice {
+  z-index: 3;
+  background-color: #ffffff;
+  background-image:
+    linear-gradient(rgba(180, 210, 230, 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(180, 210, 230, 0.3) 1px, transparent 1px);
+  background-size: calc(100% / 14) calc(100vw / 14);
+}
+
+.voice__main {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.voice__cta {
+  padding: 0 11px 96px;
+}
+
+.voice__cta img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ===== 募集要項 ===== */
 .requirements {
   z-index: 1;
   margin-top: -60px;
@@ -356,97 +418,7 @@ details[open] > .requirements__q::after {
   height: auto;
 }
 
-/* ===== achievements ===== */
-.achievements {
-  position: relative;
-  margin-top: -68px;
-  z-index: 4;
-  background-image: url('../img/achievement/achievements_bg.webp');
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-position: top center;
-}
-
-.achievements__inner {
-  padding-top: 106px;
-}
-
-.achievements__title {
-  display: block;
-  width: calc(100% - 42px);
-  height: auto;
-  margin: 0 21px 56px;
-}
-
-.achievements__group {
-  position: relative;
-  margin-top: 56px;
-}
-
-.achievements__group:first-of-type {
-  margin-top: 0;
-}
-
-.achievements__card-bg {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.achievements__items {
-  position: absolute;
-  bottom: 120px;
-  left: 36px;
-  right: 36px;
-  display: flex;
-  flex-direction: column;
-  gap: 49px;
-}
-
-.achievements__item {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.achievements__group--right .achievements__item {
-  align-self: flex-end;
-}
-
-.achievements__pdf {
-  display: block;
-  width: 100%;
-  height: auto;
-  box-shadow: 0 1px 4px rgba(120,120,120,0.25);
-}
-
-.achievements__item-title {
-  margin: 0;
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  color: #fff;
-  line-height: 1.6;
-  letter-spacing: 0.36px;
-}
-
-.achievements__item-url {
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  color: #fff;
-  text-decoration: underline;
-  line-height: 1.6;
-  letter-spacing: 0.28px;
-  word-break: break-all;
-  transition: opacity 0.2s ease;
-}
-
-.achievements__item-url:hover {
-  opacity: 0.6;
-}
-
-/* ===== qa ===== */
+/* ===== Q&A ===== */
 .qa {
   background: #f8f8f8;
 }
@@ -467,44 +439,7 @@ details[open] > .requirements__q::after {
   height: auto;
 }
 
-/* ===== voice ===== */
-.voice {
-  z-index: 3;
-  background-color: #ffffff;
-  background-image:
-    linear-gradient(rgba(180, 210, 230, 0.3) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(180, 210, 230, 0.3) 1px, transparent 1px);
-  background-size: calc(100% / 14) calc(100vw / 14);
-}
-
-.voice__main {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.voice__cta {
-  padding: 0 11px 96px;
-}
-
-.voice__cta img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-/* インラインCTAボタン */
-.blk--cta {
-  position: relative;
-}
-
-.inline-cta {
-  position: absolute;
-  bottom: 48px;
-  left: 10%;
-  right: 10%;
-}
-
+/* ===== インラインCTA ===== */
 .inline-cta__banner {
   display: block;
   width: 100%;
@@ -516,353 +451,7 @@ details[open] > .requirements__q::after {
   height: auto;
 }
 
-
-#cta .cta-frame{
-  position: relative;
-  max-width: 750px;
-  margin: 0 auto;
-  overflow: hidden;
-  background: linear-gradient(347deg, #002A5A 20.17%, #004CA3 79.83%);
-}
-
-#cta .cta-frame > img{
-  display: block;
-  width: 100%;
-  height: auto;
-  position: relative;
-  z-index: 1;
-}
-
-
-
-#cta .cta-frame::after{
-  content: "";
-  position: absolute;
-  inset: 14px;
-  border: 1.5px solid rgba(255,255,255,.9);
-  border-radius: 14px;
-  pointer-events: none;
-  z-index: 2;
-  box-sizing: border-box;
-}
-
-/* ボタン（白ピル） */
-#cta .cta-btn {
-  position: relative;          /* ←これが無いとアイコンが飛ぶ */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 80%;
-  height: 64px;
-  margin: 0px auto 48px;
-
-  background:#fff;
-  border-radius:999px;
-  text-decoration:none;
-
-  color:#0b3a78;
-  font-size:24px;
-  font-weight:800;
-
-  box-shadow: 0 10px 24px rgba(0,0,0,.22);
-}
-
-
-
-
-/* 丸アイコン（巨大化防止含む） */
-#cta .cta-btnIcon{
-  position:absolute;
-  right:16px;
-  top:50%;
-  transform:translateY(-50%);
-
-  width:44px !important;
-  height:44px !important;
-  max-width:none;              /* img{width:100%}対策 */
-  display:block;
-}
-
-
-
-  /*よくあるご質問*/
-  :root{
-    --navy: #013067;
-    --gap: 14px;
-    --pad: 14px;
-    --q: #f25c3b; /* Qのオレンジっぽい */
-  }
-  
-  .faq{
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 84px 14px;
-  }
-  
-  .faq__title{
-    margin: 0 0 48px;
-    text-align: center;
-    color: var(--navy);
-    font-size: 28px;
-    font-weight: 800;
-    letter-spacing: 0.04em;
-  }
-  
-  .faq__list{
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-  }
-  
-  .faq__item{
-    border: 1px solid var(--navy);
-    background: #fff;
-  }
-  
-  /* summaryデフォルトの三角を消す */
-  .faq__q{
-    list-style: none;
-  }
-  .faq__q::-webkit-details-marker{
-    display: none;
-  }
-  
-  /* ✅ あなたのレイアウト指定（ここが本体） */
-  .faq__q{
-    display: flex;
-    padding: var(--pad) var(--pad);
-    align-items: center;
-    gap: var(--gap);
-    align-self: stretch;
-  
-    cursor: pointer;
-  }
-  
-  /* 上段（Q + テキスト + 右アイコン） */
-  .faq__qleft{
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    width: 100%;
-  }
-  
-  /* Q / A バッジ */
-  .faq__badge{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  
-    width: 40px;
-    height: 40px;
-    border-radius: 999px;
-  
-    font-size: 18px;
-    font-weight: 800;
-    color: #fff;
-    background: var(--q);
-    flex: 0 0 auto;
-  }
-  
-  .faq__badge--a{
-    background: #fff;
-    color: var(--navy);
-    border: 1px solid var(--navy);
-  }
-  
-  /* 質問文 */
-  .faq__qtext{
-    color: var(--navy);
-    font-size: 18px;
-    font-weight: 800;
-    line-height: 1.5;
-    flex: 1;
-  }
-  
-  /* 右側 + / - アイコン（CSSで描く） */
-  .faq__icon{
-    margin-left: auto;
-    width: 22px;
-    height: 22px;
-    position: relative;
-    flex: 0 0 auto;
-  }
-  .faq__icon::before,
-  .faq__icon::after{
-    content:"";
-    position:absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    height: 2px;
-    background: var(--navy);
-    transform: translateY(-50%);
-  }
-  .faq__icon::after{
-    transform: translateY(-50%) rotate(90deg);
-  }
-  
-  /* 開いたら + → - */
-  .faq__item[open] .faq__icon::after{
-    display: none;
-  }
-  
-  /* 回答部分 */
-  .faq__a{
-    padding: 0 var(--pad) var(--pad);
-    display: flex;
-    gap: 14px;
-    align-items: flex-start;
-  }
-  
-  .faq__ahead{
-    padding-top: 2px;
-  }
-  
-  .faq__atext{
-    margin: 0;
-    color: var(--navy);
-    font-size: 16px;
-    line-height: 1.8;
-  }
-  
-  /* モバイル微調整 */
-  @media (max-width: 360px){
-    .faq__qtext{ font-size: 16px; }
-    .faq__badge{ width: 36px; height: 36px; }
-  }
-
-  /* お問い合わせ セクション（カード） */
-.contact{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 56px;
-  
-    padding: 40px 14px;
-    margin: 0 auto;
-  
-    border-radius: 35px 35px 0 0;
-    background: linear-gradient(190deg, #E4EBFF 0.35%, #FFFFFF 49.59%, #E5ECFF 99.65%);
-  }
-  
-  /* 見出し */
-  .contact__head{
-    text-align: center;
-  }
-  
-  .contact__title{
-    margin: 0;
-    color: #013067;
-    font-size: 32px;
-    font-weight: 800;
-    letter-spacing: 0.04em;
-  }
-  
-  .contact__sub{
-    margin: 14px 0 0;
-    color: #013067;
-    font-size: 14px;
-    font-weight: 600;
-  }
-  
-  /* フォーム */
-  .contact__form{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-  }
-  
-  /* 各フィールド */
-  .field{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .field__label{
-    color: #013067;
-    font-size: 16px;
-    font-weight: 800;
-    letter-spacing: 0.02em;
-  }
-  
-  .req{
-    color: #E60023;
-    margin-left: 4px;
-    font-weight: 800;
-  }
-  
-  /* 入力 */
-  .field__input,
-  .field__textarea{
-    padding: 14px 14px;
-    font-size: 16px;
-  
-    border-radius: 6px;
-    border: 1px solid rgba(1, 48, 103, 0.28);
-    background: #FFFFFF;
-  
-    outline: none;
-  }
-  
-  /* プレースホルダー（画像の薄いグレー感） */
-  .field__input::placeholder,
-  .field__textarea::placeholder{
-    color: rgba(1, 48, 103, 0.35);
-  }
-  
-  /* フォーカス時（画像っぽく控えめ） */
-  .field__input:focus,
-  .field__textarea:focus{
-    border-color: rgba(1, 48, 103, 0.55);
-  }
-  
-  /* テキストエリアは縦だけ伸ばせる */
-  .field__textarea{
-    resize: vertical;
-    min-height: 220px;
-  }
-  
-  /* 送信ボタン（ピル＋グラデ＋影） */
-  .contact__submit{
-    position: relative;
-    margin: 35px auto;
-    width: 80%;
-    padding: 18px 16px;
-  
-    border: 0;
-    border-radius: 999px;
-  
-    background: linear-gradient(95deg, #002A5A 0.16%, #004CA3 99.84%);
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
-  
-    color: #fff;
-    font-size: 16px;
-    font-weight: 800;
-    letter-spacing: 0.06em;
-  
-    cursor: pointer;
-  }
-
-  .contact__submit .btn-icon{
-    position: absolute;
-    right: 18px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 44px;   /* 丸アイコンのサイズ */
-    height: 44px;
-  }
-  
-  /* 押した感 */
-  .contact__submit:active{
-    transform: translateY(1px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.16);
-  }
-  
-    
-  
+/* ===== フッター ===== */
 .footer {
   background: #00245e;
   display: flex;
@@ -886,6 +475,13 @@ details[open] > .requirements__q::after {
   width: 100%;
 }
 
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 21px;
+}
+
 .footer__link {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 14px;
@@ -894,13 +490,6 @@ details[open] > .requirements__q::after {
   text-decoration: underline;
   letter-spacing: 0.28px;
   line-height: 1.6;
-}
-
-.footer__links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 21px;
 }
 
 .footer__copy {
@@ -912,105 +501,102 @@ details[open] > .requirements__q::after {
   line-height: 1.6;
 }
 
-/* =========================
-   thanks-page
-========================= */
-
+/* ===== サンクスページ ===== */
 .thanks {
-    text-align: center;
-    padding: 80px 14px 100px;
-  }
-  
-  .thanks__title {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 48px;
-    color: #e15e00;
+  text-align: center;
+  padding: 80px 14px 100px;
+}
 
-  }
-  
-  .thanks__text {
-    font-size: 14px;
-    line-height: 1.5;
-    font-weight: 600;
-    color: #333;
-  }
+.thanks__title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 48px;
+  color: #e15e00;
+}
 
-  .thanks__back{
-    margin-top: 56px;
-  }
-  
-  .thanks__btn{
-  position: relative;          /* ←これが無いとアイコンが飛ぶ */
+.thanks__text {
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 600;
+  color: #333;
+}
+
+.thanks__back {
+  margin-top: 56px;
+}
+
+.thanks__btn {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 80%;
   height: 64px;
-  margin: 0px auto 48px;
-
-  background:#fff;
-  border-radius:999px;
+  margin: 0 auto 48px;
+  background: #fff;
+  border-radius: 999px;
   border: 2px solid;
-  text-decoration:none;
+  text-decoration: none;
+  color: #0b3a78;
+  font-size: 16px;
+  font-weight: 800;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+}
 
-  color:#0b3a78;
-  font-size:16px;
-  font-weight:800;
-
-  box-shadow: 0 10px 24px rgba(0,0,0,.22);
-  }
-
-  /* 追従CTAバナー　初期状態：非表示（PC） */
-.sp-fixed-banner{
+/* ===== 追従CTAバナー ===== */
+.sp-fixed-banner {
   display: none;
 }
 
-/* スマホだけ表示 */
-@media screen and (max-width: 767px){
-  .sp-fixed-banner{
+@media screen and (max-width: 767px) {
+  .sp-fixed-banner {
     display: block;
     position: fixed;
     left: 14px;
     right: 14px;
     bottom: 7px;
     width: auto;
-    z-index: 9999; /* ほぼ最前面 */
+    z-index: 9999;
     animation: float 2.5s ease-in-out infinite;
   }
 
-  .sp-fixed-banner img{
+  .sp-fixed-banner img {
     display: block;
     width: 100%;
     height: auto;
   }
-
 }
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
+  50%      { transform: translateY(-6px); }
 }
 
-
-.pc-shell{
-  display: block; /* SPは普通に縦に流す */
+/* ===== PC/SP 3カラムレイアウト ===== */
+.pc-shell {
+  display: block;
 }
 
 .pc-shell__left,
-.pc-shell__right{
-  display: none !important;  /* SPは左右を消す */
+.pc-shell__right {
+  display: none !important;
 }
 
 .pc-nav {
   display: none !important;
 }
 
+@media screen and (min-width: 1024px) {
+  .container {
+    border-left: 1.5px solid rgb(0, 7, 131);
+    border-right: 1.5px solid rgb(0, 7, 131);
+  }
 
+  .hamburger-btn,
+  .nav-modal {
+    display: none !important;
+  }
 
-/* PCだけ3レーン */
-@media screen and (min-width: 1024px){
   .footer {
     padding-bottom: 40px;
   }
@@ -1019,7 +605,6 @@ details[open] > .requirements__q::after {
   .requirements__q,
   .requirements__a,
   .achievements__item-url,
-  .contact__sub,
   .footer__link,
   .thanks__text {
     font-size: 20px;
@@ -1029,7 +614,7 @@ details[open] > .requirements__q::after {
     font-size: 24px;
   }
 
-  .pc-shell{
+  .pc-shell {
     display: grid;
     grid-template-columns: 1fr 550px 1fr;
     min-height: 100vh;
@@ -1037,17 +622,22 @@ details[open] > .requirements__q::after {
   }
 
   .pc-shell__left,
-  .pc-shell__right{
+  .pc-shell__right {
     min-height: 100vh;
     position: sticky;
-    top:0;
+    top: 0;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+    align-self: start;
   }
 
   .pc-shell__left {
     background: url("../img/pc_bg_left.webp") center / cover no-repeat;
+  }
+
+  .pc-shell__right {
+    background: url("../img/pc_bg_right.webp") center / cover no-repeat;
   }
 
   .pc-cta-banner {
@@ -1062,32 +652,6 @@ details[open] > .requirements__q::after {
     animation: float 2.5s ease-in-out infinite;
   }
 
-  .pc-shell__right {
-    background: url("../img/pc_bg_right.webp") center / cover no-repeat;
-  }
-
-  /* 中央：スマホ幅を固定して”端末っぽく” */
-  .pc-shell__center{
-    width: 420px;         /* 375〜420で調整 */
-    margin: 0 auto;
-    border-radius: 18px;  /* お好み */
-    box-shadow: 0 20px 60px rgba(0,0,0,.18);
-    overflow: hidden;     /* 中身が角丸からはみ出さない */
-    background: #fff;     /* 背景が白いUIなら */
-  }
-
-  .pc-shell__left{
-    position: sticky;
-    top: 0;
-    align-self: start;
-  }
-
-  .pc-shell__right{
-    position: sticky;
-    top: 0;
-    align-self: start;
-  }
-
   .pc-nav {
     display: flex !important;
     flex-direction: column;
@@ -1096,7 +660,7 @@ details[open] > .requirements__q::after {
   }
 
   .pc-nav__link {
-    font-family: “Noto Sans JP”, sans-serif;
+    font-family: "Noto Sans JP", sans-serif;
     font-size: 20px;
     font-weight: 700;
     color: #fff;
@@ -1110,8 +674,3 @@ details[open] > .requirements__q::after {
     opacity: 0.6;
   }
 }
-
-
-  
-  
-  
