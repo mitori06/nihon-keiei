@@ -614,6 +614,11 @@ details[open] > .requirements__q::after {
     font-size: 24px;
   }
 
+  .voice,
+  .requirements {
+    background-size: calc(550px / 14) calc(550px / 14);
+  }
+
   .pc-shell {
     display: grid;
     grid-template-columns: 1fr 550px 1fr;
